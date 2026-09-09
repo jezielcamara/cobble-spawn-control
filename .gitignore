@@ -1,0 +1,55 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Minecraft development runtime
+run/
+runs/
+logs/
+crash-reports/
+saves/
+screenshots/
+resourcepacks/
+shaderpacks/
+options.txt
+usercache.json
+usernamecache.json
+
+# Generated and local configuration
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
+
+# Java
+*.class
+*.jar
+hs_err_pid*
+replay_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
