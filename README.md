@@ -57,4 +57,3 @@ Use this repository URL for the **Source** field on Modrinth:
 Use this URL for the **Issues** field:
 
 `https://github.com/jezielcamara/cobble-spawn-control/issues`
-A Minecraft mod for controlling Cobblemon spawn behavior.
