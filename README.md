@@ -1,59 +1,62 @@
 # Cobble Spawn Control
 
-A Minecraft mod for controlling Cobblemon spawn behavior.
-
-> The first mod build has not been published yet. Version and compatibility details will be added with the initial release.
-
-## About
-
-Cobble Spawn Control is intended to provide configurable control over Cobblemon spawning. This repository is prepared for the project files, documentation, and public releases.
+Cobble Spawn Control adds world-scale control over wild Cobblemon population,
+ecology, rarity, density, and levels.
 
 ## Compatibility
 
 | Component | Supported version |
 | --- | --- |
-| Minecraft | To be announced |
-| Mod loader | To be announced |
-| Cobblemon | To be announced |
-| Java | To be announced |
+| Minecraft | 1.21.1 |
+| Mod loader | NeoForge 21.1+ |
+| Cobblemon | 1.8.1 up to, but not including, 1.9 |
+| Java | 21 |
+
+Version 0.5.0 restores the complete source project and updates the runtime
+compatibility contract for Cobblemon 1.8.1.
+
+## Features
+
+- Applies configurable Cobblemon density and spawn-distance settings.
+- Scales wild Pokemon levels using distance, depth, dimension, biome, and species rules.
+- Enforces configurable local total-population and per-species caps.
+- Classifies vanilla and modded biomes into configurable ecological habitats.
+- Generates automatic type-based ecology for species without an explicit rule, including addon species.
+- Supports species rules, habitat allow/block lists, time windows, spawn acceptance, local caps, and level clamps.
+- Includes in-game configuration screens and `/csc` diagnostics commands.
+- Fails open when a single rule cannot be evaluated so one bad entry does not stop all Cobblemon spawning.
 
 ## Installation
 
-1. Install the supported mod loader and Cobblemon version listed above.
-2. Download the latest release from Modrinth once it is available.
-3. Place the downloaded `.jar` file in your Minecraft `mods` folder.
-4. Start Minecraft and confirm that the mod appears in the loaded mods list.
+1. Install Minecraft 1.21.1, NeoForge 21.1 or newer, and Cobblemon 1.8.1.
+2. Place the Cobble Spawn Control JAR in the instance's `mods` folder.
+3. Start the game once to create the configuration files.
 
 ## Configuration
 
-Configuration options and examples will be documented when the first mod files are uploaded.
+Configuration is created under `config/cobblespawncontrol/`:
 
-## Downloads
+- `general.json` controls density, world-driven levels, population limits, evolution rarity, and global behavior.
+- `habitats.json` defines habitat detection and carrying capacity.
+- `species.json` defines explicit species and addon-species overrides.
 
-- Modrinth: Coming soon
-- GitHub releases: [Releases](https://github.com/jezielcamara/cobble-spawn-control/releases)
+Use `/csc reload` after editing configuration. `/csc inspect` reports the current location, habitat, local population, and predicted wild level. The diagnostics command can produce an ecology report under the configuration directory.
 
-## Reporting problems
+## Building
 
-Use [GitHub Issues](https://github.com/jezielcamara/cobble-spawn-control/issues) and include:
+The repository includes a Gradle wrapper and uses NeoForge ModDevGradle.
 
-- Minecraft version
-- Mod loader and version
-- Cobblemon version
-- Cobble Spawn Control version
-- Steps to reproduce the problem
-- Relevant logs or crash reports
+```text
+gradlew.bat clean build
+```
+
+The resulting JAR is written to `build/libs/`.
+
+## Links
+
+- [GitHub repository](https://github.com/jezielcamara/cobble-spawn-control)
+- [Issue tracker](https://github.com/jezielcamara/cobble-spawn-control/issues)
 
 ## Source and licensing
 
-The source code will be added to this repository. No license has been selected yet; until one is added, the project remains under standard copyright protection.
-
-## Modrinth project links
-
-Use this repository URL for the **Source** field on Modrinth:
-
-`https://github.com/jezielcamara/cobble-spawn-control`
-
-Use this URL for the **Issues** field:
-
-`https://github.com/jezielcamara/cobble-spawn-control/issues`
+The project metadata declares All Rights Reserved. No additional license grant is provided by this repository.

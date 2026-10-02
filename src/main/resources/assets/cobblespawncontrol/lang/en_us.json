@@ -1,0 +1,18 @@
+{
+  "cobblespawncontrol.configuration.title": "Cobble Spawn Control",
+  "cobblespawncontrol.configuration.density": "Spawn Density",
+  "cobblespawncontrol.configuration.levels": "Wild Levels",
+  "cobblespawncontrol.configuration.depth": "Depth Scaling",
+  "cobblespawncontrol.configuration.population": "Population",
+  "cobblespawncontrol.configuration.rarity": "Evolution Rarity",
+  "cobblespawncontrol.configuration.ecology": "Ecology",
+  "cobblespawncontrol.configuration.biomes": "Biome Signals",
+  "cobblespawncontrol.configuration.climate": "Climate Thresholds",
+  "cobblespawncontrol.configuration.enabled": "Enabled",
+  "cobblespawncontrol.configuration.disabled": "Disabled",
+  "cobblespawncontrol.configuration.save": "Save",
+  "cobblespawncontrol.configuration.cancel": "Cancel",
+  "cobblespawncontrol.configuration.mode.patterns_only": "Patterns Only",
+  "cobblespawncontrol.configuration.mode.balanced": "Balanced",
+  "cobblespawncontrol.configuration.mode.aggressive": "Aggressive"
+}
